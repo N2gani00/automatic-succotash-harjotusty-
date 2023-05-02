@@ -1,0 +1,267 @@
+/* content osion fontti säätö*/
+#content {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 150px repeat(4,1fr);
+    grid-template-rows: auto;
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/** kun checkbox on painettu niin teksti muuttuu keltaseksi*/
+.important {
+    background-color: yellow;
+    font-weight: bold;
+  }
+
+  label.important {
+    background-color:#CDB132 ;
+  }
+  
+
+
+header {
+    display: flex;
+    background-color: #F24B0D;
+    grid-column: 1/6;
+    border: black 2px solid;
+}
+
+header img {
+    float: left;
+    height: 80px;
+    margin: 10px;
+}
+
+nav >ul {
+    margin-top: 18px;
+    padding-left: 5px;
+    line-height: 0;
+}
+
+nav {
+    background-color: #F24B0D;
+    font-size: 1.2em;
+    min-height: 150px;
+    width: 150px;
+    grid-column: 1/2;
+    grid-row: 2/4;
+}
+/* kun hiiri on nav barin päällä niin nav bar muuttuu sitä mukaa missä hiiri on */
+nav:hover {
+border: 2px solid rgb(0, 0, 0);
+display: block;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    display: block;
+    background-color:  #0DB4F2;
+    border: black 2px solid;
+    border-radius: 4px;
+}
+
+nav > a:hover {
+    background-color: #0DB4F2;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    display: block;
+}
+
+.brave {
+    margin-left: 10px;
+    margin-top: 5px;
+    background-image: url(../Kuvat/Info.png);
+    grid-column: 2/3;
+    background-size:contain;
+    border: 10px solid #324ECD;
+    position: center;
+}
+
+.brave:hover {
+border-color: #324ECD(150, 87, 0);
+}
+
+.intelligent {
+    margin-left: 30px;
+    margin-top: 6px;
+    background-image: url(../Kuvat/talo.jpg);
+    background-size: contain;
+    grid-column: 3/4;
+    border: 10px solid #CD329B;
+    position: relative;
+}
+
+.intelligent:hover {
+    border-color: #CD329B;
+                    
+}
+
+.fair {
+    margin-left: 40px;
+    margin-top: 5px;
+    background-image: url(../Kuvat/Note.jpg);
+    background-size: contain;
+    grid-column: 4/5;
+    border: 10px solid #CDB132;
+}
+
+.fair:hover {
+    border-color:  #CDB132;
+}
+
+.responsible {
+    margin-left: 17px;
+    margin-top: 5px;
+    background-image: url(../Kuvat/suurennus.png);
+    background-size: contain;
+    grid-column: 5/6;
+    border: 10px solid #32CD64;
+}
+
+.responsible:hover {
+    border-color: #32CD64;
+}
+
+.brave, .intelligent, .fair, .responsible {
+    color: #000000;
+    height: 200px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1.4em;
+    text-decoration: none;
+    text-align: right;
+    padding-right: 10px;
+}
+
+article {
+    grid-column: 2/6;
+    padding-bottom: 15px;
+}
+
+article p {
+    text-align: justify;
+    font-size: 1.2em;
+    padding: 0px 15px 0px 15px;
+}
+
+footer {
+    display: flex;
+    background-color: #F24B0D;
+    grid-column: 1/6;
+    grid-row: 4/5;
+    padding: 5px;
+    align-items: center;
+}
+
+footer div {
+    flex-grow: 5;
+    text-align: right;
+}
+
+footer img {
+    height: 80px;
+    margin: 10px;
+}
+
+header, nav, article, footer {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+table, th, td {
+    text-align: left;
+    padding-right: 25px;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    nav {
+        grid-row: 2/7;
+    }
+
+    .brave, .intelligent, .fair, .responsible {
+    background-image: none;
+    background-color: rgb(235, 210, 120);
+    border: 2px solid black;
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    grid-column: 2/6;
+    height: fit-content;
+    }
+
+    .brave {
+        grid-row: 2/2;
+    }
+
+    .brave.hover {
+        background-color: #0DB4F2;
+        border-color: #F24B0D;
+    }
+
+    .intelligent {
+        grid-row: 3/3;
+    }
+
+    .intelligent:hover {
+        background-color: #0DB4F2;
+        border-color: #F05A5A;
+    }
+
+    .fair {
+        grid-row: 4/4;
+    }
+
+    .fair:hover {
+        background-color: #0DB4F2;
+        border-color:  #55c8ff;
+    }
+
+    .responsible {
+        grid-row: 5/5;
+    }
+
+    .responsible:hover {
+        background-color: #0DB4F2;
+        border-color: #006e0a;
+    }
+
+    footer {
+        grid-row: 7/7;
+    }
+
+    footer img {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    nav {
+        width: 20px;
+        position: absolute;
+        display: block;
+        font-size: 0;
+        top: 110px;
+        padding-bottom: 9px;
+    }
+
+    .brave, .intelligent, .fair, .responsible, article {
+        grid-column: 1/6;
+    }
+nav:hover {
+    padding-bottom: 8px;
+    width: 150px;
+    font-size: 20px;
+}
+    }
